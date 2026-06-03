@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lisda Yanti – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- CANVAS BACKGROUND -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">&lt;LY/&gt;</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-status"><span class="dot"></span>Available for opportunities</div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1 class="hero-name">
+        <span class="name-line">LISDAYANTI</span>
+      </h1>
+      <p class="hero-roles">
+        <span class="role-tag">Network Engineer</span>
+        <span class="role-sep">·</span>
+        <span class="role-tag">IT Instructor</span>
+        <span class="role-sep">·</span>
+        <span class="role-tag">Information Systems Undergraduate</span>
+      </p>
+      <p class="hero-desc">Information Systems student at Universitas Pamulang with hands on experience in network infrastructure, vocational IT education, and competition coaching, Passionate about building robust networks and empowering the next generation of tech talent.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Get In Touch</a>
+        <a href="#about" class="btn-outline">View Portfolio</a>
+      </div>
+      <!-- DOWNLOAD CARD -->
+      <div class="download-card" id="downloadCard">
+        <div class="dl-title"><span class="dl-icon">⬇</span> Download Portfolio</div>
+        <div class="dl-buttons">
+          <button class="dl-btn" id="dlCV" onclick="downloadFile('cv')">
+            <span class="dl-btn-icon">📄</span>
+            <span class="dl-btn-text">
+              <strong>CV Document</strong>
+              <small>.docx format</small>
+            </span>
+          </button>
+          <button class="dl-btn" id="dlPPTX" onclick="downloadFile('pptx')">
+            <span class="dl-btn-icon">📊</span>
+            <span class="dl-btn-text">
+              <strong>Portfolio Slides</strong>
+              <small>.pptx format</small>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="t-title">lisda@portfolio:~$</span>
+      </div>
+      <div class="terminal-body" id="terminal"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2>About Me</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm an Information Systems undergraduate at Universitas Pamulang with a strong passion for network engineering and IT education. With a current GPA of 3.69/4.00, I balance academic excellence with real-world professional work.</p>
+        <p>Currently serving as a Productive Teacher and Competition Coach at SMK Mulia Hati Insani, I guide students through the complexities of network infrastructure from MikroTik configuration to server administration.</p>
+        <p>My journey from First Place in the Regency IT Competition to representing Banten Province and competing in the National MikroTik Olympiad reflects my drive to push technical boundaries.</p>
+        <div class="about-stats">
+          <div class="stat-item"><div class="stat-val">3.69</div><div class="stat-label">GPA</div></div>
+          <div class="stat-item"><div class="stat-val">#1</div><div class="stat-label">Regency Rank</div></div>
+          <div class="stat-item"><div class="stat-val">3×</div><div class="stat-label">Best Student</div></div>
+          <div class="stat-item"><div class="stat-val">2+</div><div class="stat-label">Years Teaching</div></div>
+        </div>
+      </div>
+      <div class="about-info">
+        <div class="info-item"><span class="info-key">Location</span><span class="info-val">Lebak, Banten, Indonesia</span></div>
+        <div class="info-item"><span class="info-key">Email</span><span class="info-val">elislisdayanti656@gmail.com</span></div>
+        <div class="info-item"><span class="info-key">Phone</span><span class="info-val">+62 858-8165-3078</span></div>
+        <div class="info-item"><span class="info-key">LinkedIn</span><span class="info-val">Lisdayanti</span></div>
+        <div class="info-item"><span class="info-key">Current Role</span><span class="info-val">Teacher & Coach @ SMK Mulia Hati Insani</span></div>
+        <div class="info-item"><span class="info-key">Languages</span><span class="info-val">Indonesian (Native) · English (Professional)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2>Education</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="edu-cards">
+      <div class="edu-card">
+        <div class="edu-badge">S1</div>
+        <div class="edu-info">
+          <h3>Universitas Pamulang</h3>
+          <p class="edu-degree">Bachelor of Information Systems</p>
+          <p class="edu-year">2024 – Present</p>
+          <div class="edu-gpa">GPA <strong>3.69 / 4.00</strong></div>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-badge">SMK</div>
+        <div class="edu-info">
+          <h3>SMK Mulia Hati Insani Warunggunung</h3>
+          <p class="edu-degree">Computer and Network Engineering</p>
+          <p class="edu-year">2021 – 2024</p>
+          <div class="edu-gpa"><strong>Graduated with Academic Distinction</strong> · First Rank All 3 Years</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2>Experience</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-header">
+            <h3>Productive Teacher – Computer and Network Engineering</h3>
+            <span class="tl-period">2024 – Present</span>
+          </div>
+          <p class="tl-place">SMK Mulia Hati Insani</p>
+          <ul class="tl-list">
+            <li>Deliver instruction in Network Planning, Addressing, and Wired & Wireless Technologies</li>
+            <li>Guide students in subnetting, CIDR, routing, switching, and troubleshooting</li>
+            <li>Develop competency-based assessments aligned with vocational standards</li>
+            <li>Supervise laboratory-based network installation and configuration activities</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-header">
+            <h3>Competition Coach – IT Network System Administrator</h3>
+            <span class="tl-period">2024 – Present</span>
+          </div>
+          <p class="tl-place">SMK Mulia Hati Insani</p>
+          <ul class="tl-list">
+            <li>Design intensive training for regional and provincial-level competitions</li>
+            <li>Mentor students in MikroTik technologies, server administration, and troubleshooting</li>
+            <li>Coach participants for National MikroTik Olympiad and technical competitions</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-header">
+            <h3>Social Media Administrator</h3>
+            <span class="tl-period">2025 – Present</span>
+          </div>
+          <p class="tl-place">SMK Mulia Hati Insani</p>
+          <ul class="tl-list">
+            <li>Manage and maintain school's digital presence across social media platforms</li>
+            <li>Develop promotional content, educational campaigns, and institutional branding materials</li>
+            <li>Produce visual and video content using Canva and CapCut</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-header">
+            <h3>Internship – Secretariat Division</h3>
+            <span class="tl-period">2023</span>
+          </div>
+          <p class="tl-place">DPMPTSP Lebak Regency</p>
+          <ul class="tl-list">
+            <li>Assisted in managing personnel and financial archives</li>
+            <li>Supported administrative operations and correspondence management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2>Technical Skills</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <div class="sk-cat-header"><span class="sk-icon">🌐</span>Networking & Infrastructure</div>
+        <div class="sk-tags">
+          <span>TCP/IP</span><span>Routing & Switching</span><span>MikroTik</span>
+          <span>VPN</span><span>Firewall</span><span>VLAN</span>
+          <span>Wireless Networking</span><span>DNS Services</span>
+          <span>FTP / Mail / Web</span><span>CIDR & Subnetting</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="sk-cat-header"><span class="sk-icon">🖥️</span>System Administration</div>
+        <div class="sk-tags">
+          <span>Linux Environment</span><span>Windows Server</span>
+          <span>Server Deployment</span><span>System Maintenance</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="sk-cat-header"><span class="sk-icon">💻</span>Software Development</div>
+        <div class="sk-tags">
+          <span>Flutter</span><span>Java</span><span>PHP</span>
+          <span>C++</span><span>HTML</span><span>CSS</span>
+          <span>JavaScript</span><span>Database Design</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="sk-cat-header"><span class="sk-icon">🔧</span>Tools & Platforms</div>
+        <div class="sk-tags">
+          <span>Android Studio</span><span>VS Code</span><span>NetBeans</span>
+          <span>XAMPP</span><span>Draw.io</span><span>OpenRefine</span>
+          <span>KNIME</span><span>Canva</span><span>CapCut</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <div class="sk-cat-header"><span class="sk-icon">📊</span>System Analysis & Data</div>
+        <div class="sk-tags">
+          <span>Requirements Analysis</span><span>Use Case Modeling</span>
+          <span>Data Cleansing</span><span>Data Transformation</span>
+          <span>Business Process Analysis</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <h2>Achievements</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card gold">
+        <div class="ach-medal">🏆</div>
+        <div class="ach-info">
+          <div class="ach-rank">1st Place</div>
+          <div class="ach-title">IT Network System Administrator Competition</div>
+          <div class="ach-meta">Lebak Regency · 2024</div>
+        </div>
+      </div>
+      <div class="ach-card silver">
+        <div class="ach-medal">🥈</div>
+        <div class="ach-info">
+          <div class="ach-rank">Provincial Representative</div>
+          <div class="ach-title">IT Network System Administrator Competition</div>
+          <div class="ach-meta">Banten Province · 2024</div>
+        </div>
+      </div>
+      <div class="ach-card blue">
+        <div class="ach-medal">🌐</div>
+        <div class="ach-info">
+          <div class="ach-rank">National Participant</div>
+          <div class="ach-title">MikroTik Olympiad by Citraweb</div>
+          <div class="ach-meta">National Level · 2023</div>
+        </div>
+      </div>
+      <div class="ach-card cyan">
+        <div class="ach-medal">⭐</div>
+        <div class="ach-info">
+          <div class="ach-rank">Best Student (3 Consecutive Years)</div>
+          <div class="ach-title">Computer and Network Engineering Dept.</div>
+          <div class="ach-meta">SMK Mulia Hati Insani · 2021–2024</div>
+        </div>
+      </div>
+      <div class="ach-card cyan">
+        <div class="ach-medal">📚</div>
+        <div class="ach-info">
+          <div class="ach-rank">First Rank All Years</div>
+          <div class="ach-title">Academic Achievement – Grade X, XI, and XII</div>
+          <div class="ach-meta">SMK Mulia Hati Insani · 2021–2024</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section id="leadership" style="padding-top:0">
+    <div class="section-header" style="padding-top:2rem">
+      <span class="section-number">06</span>
+      <h2>Leadership</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="lead-grid">
+      <div class="lead-card"><div class="lead-pos">President</div><div class="lead-org">Student Council (OSIS)</div><div class="lead-year">2023–2024</div></div>
+      <div class="lead-card"><div class="lead-pos">Vice Chairperson</div><div class="lead-org">Youth Info & Counseling (PIK-R)</div><div class="lead-year">2023–2024</div></div>
+      <div class="lead-card"><div class="lead-pos">Public Relations</div><div class="lead-org">School Security Patrol (PKS)</div><div class="lead-year">2023–2024</div></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-number">07</span>
+      <h2>Contact</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-left">
+        <p class="contact-intro">Have a project, opportunity, or just want to connect? I'd love to hear from you.</p>
+        <div class="contact-items">
+          <a class="contact-item" href="mailto:elislisdayanti656@gmail.com">
+            <span class="ci-icon">📧</span>
+            <span>elislisdayanti656@gmail.com</span>
+          </a>
+          <a class="contact-item" href="tel:+6285881653078">
+            <span class="ci-icon">📱</span>
+            <span>+62 858-8165-3078</span>
+          </a>
+          <div class="contact-item">
+            <span class="ci-icon">💼</span>
+            <span>LinkedIn: Lisda Yanti</span>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">📍</span>
+            <span>Lebak, Banten, Indonesia</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="dl-card-big">
+          <h3>Download Portfolio</h3>
+          <p>Get the full CV and presentation slides</p>
+          <div class="dl-btns-big">
+            <button class="dl-big-btn" onclick="downloadFile('cv')">
+              <span>📄</span>
+              <div><strong>CV Document</strong><small>lisda_yanti_cv.docx</small></div>
+            </button>
+            <button class="dl-big-btn" onclick="downloadFile('pptx')">
+              <span>📊</span>
+              <div><strong>Portfolio Slides</strong><small>lisda_yanti_portfolio.pptx</small></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">&lt;LY /&gt;</div>
+      <p>Lisda Yanti · Network Engineer · IT Instructor · IS Undergraduate</p>
+      <p class="footer-sub">Built with passion for technology · Lebak, Banten · 2025</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
